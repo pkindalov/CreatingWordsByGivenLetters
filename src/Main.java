@@ -10,7 +10,11 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder generatedWord = new StringBuilder();
+        Reader dictReader = new Reader();
 
+        generatedWord.append(dictReader.readFile());
+        System.out.println(generatedWord.toString());
 
 
         System.out.println("Enter count of letters of word to generate(2-6):");
