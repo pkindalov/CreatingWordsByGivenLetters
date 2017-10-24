@@ -27,6 +27,9 @@ public class Main {
             char[] letters = userInput.toCharArray();
 
             switch (lettersCount){
+                case 2:
+                    gen2LettersWords(letters);
+                    break;
                 case 5:
                     gen5LettersWords(letters);
                     break;
@@ -44,6 +47,45 @@ public class Main {
 
 
 
+
+
+    }
+
+
+    private static void gen2LettersWords(char[] letters){
+
+        for(int pos1 = 0; pos1 < letters.length; pos1++){
+            for(int pos2 = 0; pos2 < letters.length; pos2++){
+                for(int pos3 = 0; pos3 < letters.length; pos3++){
+                    for(int pos4 = 0; pos4 < letters.length; pos4++){
+                        for(int pos5 = 0; pos5 < letters.length; pos5++){
+                            for (int pos6 = 0; pos6 < letters.length; pos6++){
+                                if(pos1 != pos2){
+                                    if(pos2 != pos3){
+                                        if(pos3 != pos4){
+                                            if(pos4 != pos5){
+                                                if(pos5 != pos6){
+
+                                                    System.out.print("" + letters[pos1] + letters[pos2] + " ");
+                                                    System.out.print("" + letters[pos2] + letters[pos3] + " ");
+                                                    System.out.print("" + letters[pos3] + letters[pos4] + " ");
+                                                    System.out.print("" + letters[pos5] + letters[pos6] + " ");
+                                                    System.out.print("" + letters[pos4] + letters[pos5] + " ");
+                                                    System.out.println();
+                                                }
+//                                                System.out.println();
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
 
 
     }
@@ -97,6 +139,8 @@ public class Main {
 
 //        }
     }
+
+
 
 
 }
