@@ -19,7 +19,7 @@ public class Main {
 //        System.out.println(generatedWord.toString());
 
         System.out.println("Available words in dictionary: " + allAvailableWordsBG.length);
-        System.out.println("Enter count of letters of word to generate(2-6):");
+        System.out.println("Enter count of letters of word to generate(2-7):");
         System.out.println("(For exit just enter exit or stop)");
         String command = reader.readLine();
 
