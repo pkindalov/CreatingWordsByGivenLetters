@@ -16,6 +16,8 @@ public class Main {
 
         generatedWord.append(dictReader.readFile().toLowerCase());
         String[] allAvailableWordsBG = generatedWord.toString().split(" ");
+        int lettersCount = 2;
+        boolean isError = false;
 //        System.out.println(generatedWord.toString());
 
         System.out.println("Available words in dictionary: " + allAvailableWordsBG.length);
@@ -25,7 +27,19 @@ public class Main {
 
         while (!command.equals("stop") && !command.equals("exit") && !command.equals("еьит")){
 
-            int lettersCount = Integer.parseInt(command);
+            try{
+
+                lettersCount = Integer.parseInt(command);
+
+
+            }catch (Exception e){
+                System.out.println("Wrong date. Expect a integer number");
+                isError = true;
+            }
+
+            if(isError){
+                break;
+            }
 
             System.out.println("Enter string letters: ");
             String userInput = reader.readLine();
@@ -57,7 +71,7 @@ public class Main {
             }
 
 
-            System.out.println("Enter count of letters of word to generate(2-6):");
+            System.out.println("Enter count of letters of word to generate(2-7):");
             System.out.println("For exit just enter exit or stop");
             command = reader.readLine();
         }
